@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodworth Developments | Luxury Investment, Park City Utah</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background: #F9F6F0; color: #1A1916;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    :root {
+      --cream:#F9F6F0; --cream2:#EEE8DC; --white:#fff;
+      --dark:#0E0D0A; --dark2:#181610; --gold:#B8913A; --gold2:#C9A550;
+      --text:#1A1916; --mid:#5C5650; --light:#8A847C; --border:#E4DDD0;
+    }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 48px; display: flex; align-items: center;
+      justify-content: space-between; transition: background .3s, box-shadow .3s;
+    }
+    header.scrolled {
+      background: rgba(249,246,240,.96); backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .logo { font-family: Georgia,serif; font-size: .95rem; letter-spacing: .03em;
+      color: rgba(255,255,255,.9); transition: color .3s; line-height: 1.3; }
+    .logo small { display: block; font-size: .62rem; letter-spacing: .15em;
+      text-transform: uppercase; opacity: .6; }
+    header.scrolled .logo { color: var(--text); }
+    .header-cta { background: var(--gold); color: #fff; padding: 10px 24px;
+      border-radius: 5px; font-size: .82rem; font-weight: 600;
+      letter-spacing: .05em; transition: background .2s; }
+    .header-cta:hover { background: var(--gold2); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.8);
+      transition: color .2s; text-decoration: none; }
+    .nav-links a:hover { color: var(--gold2); }
+    header.scrolled .nav-links a { color: var(--mid); }
+    header.scrolled .nav-links a:hover { color: var(--gold); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px;
+      background: rgba(255,255,255,.85); border-radius: 2px; transition: background .3s; }
+    header.scrolled .nav-hamburger span { background: var(--text); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #hero { position: relative; height: 100vh; min-height: 640px;
+      display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
+    .hero-ov { position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to top,rgba(10,8,4,.88) 0%,rgba(10,8,4,.45) 55%,rgba(10,8,4,.25) 100%); }
+    .hero-body { position: relative; z-index: 2; padding: 0 64px 80px; max-width: 820px; }
+    .hero-tag { font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold2); margin-bottom: 18px; }
+    #hero h1 { font-family: Georgia,serif; font-weight: 400; font-style: italic;
+      font-size: clamp(2.8rem,5.5vw,5rem); line-height: 1.1; letter-spacing: -.02em;
+      color: #fff; margin-bottom: 20px; }
+    .hero-sub { font-size: clamp(.95rem,1.5vw,1.1rem); color: rgba(255,255,255,.72);
+      max-width: 480px; line-height: 1.75; margin-bottom: 36px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; background: var(--gold); color: #fff;
+      padding: 14px 32px; font-size: .88rem; font-weight: 600; letter-spacing: .04em;
+      border-radius: 5px; transition: background .2s, transform .15s; }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 1.5px solid rgba(255,255,255,.5);
+      color: #fff; padding: 13px 32px; font-size: .88rem; font-weight: 500;
+      letter-spacing: .04em; border-radius: 5px; transition: border-color .2s, background .2s; }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.07); }
+    .strip { background: var(--dark); display: flex; flex-wrap: wrap; }
+    .strip-item { flex: 1 1 180px; padding: 26px 20px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,.07); }
+    .strip-item:last-child { border-right: none; }
+    .strip-item b { display: block; font-family: Georgia,serif; font-size: 1.45rem;
+      color: var(--gold2); line-height: 1.1; margin-bottom: 4px; }
+    .strip-item span { font-size: .68rem; letter-spacing: .09em;
+      text-transform: uppercase; color: rgba(255,255,255,.38); }
+    .section { padding: 96px 64px; max-width: 1160px; margin: 0 auto; }
+    .eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+    .eyebrow-w { color: var(--gold2); }
+    h2 { font-family: Georgia,serif; font-weight: 400;
+      font-size: clamp(2rem,3.5vw,3rem); letter-spacing: -.02em; line-height: 1.12; margin-bottom: 20px; }
+    #market { position: relative; background: var(--dark); }
+    #market::before { content: ''; position: absolute; inset: 0; z-index: 0;
+      background-image: linear-gradient(rgba(10,8,4,0.62),rgba(10,8,4,0.62)),url('Images/img_01.jpg');
+      background-size: cover; background-position: center 40%;
+      filter: saturate(0.55); }
+    #market > .section { position: relative; z-index: 1; }
+    #market h2 { color: #fff; }
+    #market p { color: rgba(255,255,255,.7); }
+    #market strong { color: #fff; }
+
+    #market .dot { background: var(--gold); }
+    #market li { color: rgba(255,255,255,.65); }
+    .market-wrap { max-width: 820px; }
+    .market-pills { display: flex; flex-direction: column; gap: 0; margin-top: 36px; border-top: 1px solid rgba(255,255,255,.12); }
+    .market-pill { display: flex; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: .95rem; color: rgba(255,255,255,.65); line-height: 1.5; }
+    .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); flex-shrink: 0; }
+    .market-left p { font-size: 1rem; color: rgba(255,255,255,.68); line-height: 1.8; margin-bottom: 14px; }
+    .market-left p strong { color: #fff; }
+    .bullets { list-style: none; margin-top: 24px; }
+    .bullets li { display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      font-size: .9rem; color: var(--mid); line-height: 1.5; }
+    .bullets li:first-child { border-top: 1px solid var(--border); }
+    .dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%;
+      flex-shrink: 0; margin-top: 7px; }
+    .stat-strip { display: grid; grid-template-columns: repeat(6,1fr);
+      margin-top: 64px; border-top: 1px solid rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(255,255,255,.12); }
+    .stat-box { padding: 36px 28px; border-right: 1px solid rgba(255,255,255,.1); }
+    .stat-box:last-child { border-right: none; }
+    .stat-box-num { font-family: Georgia,serif;
+      font-size: clamp(1.6rem,2vw,2.4rem); color: var(--gold2);
+      line-height: 1; margin-bottom: 10px; }
+    .stat-box-lbl { font-size: .66rem; color: rgba(255,255,255,.42);
+      line-height: 1.5; text-transform: uppercase; letter-spacing: .07em; }
+    .market-photo { border-radius: 16px; overflow: hidden; height: 620px; margin-top: 64px; }
+    .market-photo img { width: 100%; height: 100%; object-fit: cover; }
+    #deal-bg { background: var(--dark); }
+    h2#deal { color: #fff; }
+    .deal-note { color: rgba(255,255,255,.45); max-width: 500px;
+      margin-bottom: 52px; font-size: .95rem; line-height: 1.75; }
+    .deal-nums { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px;
+      background: rgba(255,255,255,.07); border-radius: 10px; overflow: hidden; margin-bottom: 60px; }
+    .deal-num-card { background: #1A1916; padding: 32px 24px; }
+    .d-lbl { font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.32); margin-bottom: 12px; }
+    .d-val { font-family: Georgia,serif; font-size: clamp(1.7rem,2.5vw,2.4rem);
+      color: var(--gold2); line-height: 1; margin-bottom: 8px; }
+    .d-note { font-size: .78rem; color: rgba(255,255,255,.3); line-height: 1.4; }
+    .deal-two { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .deal-two h3 { font-family: Georgia,serif; font-size: 1.25rem; font-weight: 400;
+      color: #fff; margin-bottom: 22px; }
+    .check-list { list-style: none; }
+    .check-list li { display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: .88rem; color: rgba(255,255,255,.52); line-height: 1.5; }
+    .check-list li:first-child { border-top: 1px solid rgba(255,255,255,.06); }
+    .ck { width: 16px; height: 16px; background: var(--gold); border-radius: 50%;
+      flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+    .ck::after { content: ""; width: 4px; height: 7px;
+      border-right: 1.5px solid #fff; border-bottom: 1.5px solid #fff;
+      transform: rotate(45deg) translateX(-1px) translateY(-1px); }
+    .tl { display: flex; flex-direction: column; }
+    .tl-step { display: flex; gap: 16px; padding: 10px 0; }
+    .tl-line { display: flex; flex-direction: column; align-items: center; width: 16px; flex-shrink: 0; }
+    .tl-line::before { content: ""; width: 9px; height: 9px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; }
+    .tl-line::after { content: ""; width: 1px; flex: 1; min-height: 22px;
+      background: rgba(255,255,255,.1); }
+    .tl-step:last-child .tl-line::after { display: none; }
+    .tl-period { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold2); margin-bottom: 3px; }
+    .tl-text { color: rgba(255,255,255,.5); font-size: .86rem; line-height: 1.5; }
+    #protection { background: var(--dark); }
+    .prot-list { margin-top: 56px; border-top: 1px solid rgba(255,255,255,.08); }
+    .prot-row { display: grid; grid-template-columns: 52px 1fr 1.6fr 28px;
+      align-items: center; gap: 28px; padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: background .2s; border-radius: 0; }
+    .prot-num { font-family: Georgia,serif; font-size: .78rem; color: var(--gold);
+      letter-spacing: .1em; }
+    .prot-name { font-size: .97rem; font-weight: 700; color: #fff; }
+    .prot-tag { font-size: .86rem; color: rgba(255,255,255,.42); line-height: 1.5; }
+    .prot-tick { width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .prot-tick::after { content: ''; width: 5px; height: 9px;
+      border-right: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold);
+      transform: rotate(45deg) translateX(-1px) translateY(-1px); }
+    #team { background: var(--cream); }
+    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 52px; }
+    .team-sub { color: var(--mid); font-size: .95rem; margin-top: 10px; margin-bottom: 48px; }
+    .logo-marquee { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(to right,transparent 0,black 10%,black 90%,transparent 100%); mask-image: linear-gradient(to right,transparent 0,black 10%,black 90%,transparent 100%); }
+    .logo-track { display: flex; gap: 40px; align-items: center; width: max-content; animation: logo-scroll 28s linear infinite; }
+    .logo-track:hover { animation-play-state: paused; }
+    @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .logo-item { display: flex; flex-direction: column; align-items: center; gap: 14px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 36px; flex-shrink: 0; min-width: 180px; transition: box-shadow .2s; }
+    .logo-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,.07); }
+    .logo-item img { height: 52px; width: auto; max-width: 160px; object-fit: contain; }
+    .logo-role { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--light); }
+    .team-card { background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 24px 18px; text-align: center; }
+    .av { width: 52px; height: 52px; border-radius: 50%; background: var(--cream2);
+      margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;
+      font-family: Georgia,serif; font-size: 1.05rem; color: var(--gold); font-style: italic; }
+    .t-name { font-size: .85rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .t-co { font-size: .68rem; color: var(--gold); margin-bottom: 2px; }
+    .t-role { font-size: .72rem; color: var(--light); line-height: 1.35; }
+    #portfolio-bg { background: var(--dark); }
+    h2#portfolio { color: #fff; }
+    .port-note { color: rgba(255,255,255,.42); margin-bottom: 52px; font-size: .9rem; }
+    .port-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .port-card { background: #1A1916; border-radius: 10px; overflow: hidden;
+      cursor: pointer; transition: transform .3s, box-shadow .3s; }
+    .port-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+    .port-imgs { display: grid; grid-template-columns: 1fr 1fr; height: 200px; gap: 2px; overflow: hidden; }
+    .port-imgs img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .port-card:hover .port-imgs img { transform: scale(1.05); }
+    .port-info { padding: 16px 18px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .port-name { color: #fff; font-family: Georgia,serif; font-size: .98rem; margin-bottom: 3px; }
+    .port-loc { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold2); }
+    .port-arrow { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2);
+      display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.5);
+      font-size: .8rem; transition: border-color .2s, color .2s; flex-shrink: 0; }
+    .port-card:hover .port-arrow { border-color: var(--gold2); color: var(--gold2); }
+    #cta-bridge { background: linear-gradient(135deg,#0B0906 0%,#181410 100%);
+      text-align: center; padding: 80px 64px; position: relative; overflow: hidden; }
+    #cta-bridge::before { content: ""; position: absolute; top: -200px; left: 50%;
+      transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle,rgba(184,145,58,.09) 0%,transparent 65%); pointer-events: none; }
+    #cta-bridge h2 { color: #fff; max-width: 600px; margin: 0 auto 14px; position: relative; }
+    #cta-bridge > p { color: rgba(255,255,255,.46); max-width: 460px; margin: 0 auto 36px;
+      font-size: .95rem; line-height: 1.75; position: relative; }
+    .terms-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0;
+      max-width: 680px; margin: 0 auto 44px; border: 1px solid rgba(255,255,255,.1);
+      border-radius: 10px; overflow: hidden; position: relative; }
+    .term-item { flex: 1 1 150px; padding: 18px 12px; border-right: 1px solid rgba(255,255,255,.08); }
+    .term-item:last-child { border-right: none; }
+    .term-val { font-family: Georgia,serif; font-size: 1.1rem; color: var(--gold2); display: block; margin-bottom: 3px; }
+    .term-lbl { font-size: .65rem; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.3); }
+    #contact { position: relative; background: var(--dark); }
+    #contact::before { content: ''; position: absolute; inset: 0; z-index: 0;
+      background-image: linear-gradient(rgba(10,8,4,0.68),rgba(10,8,4,0.68)),url('Images/img_02.jpg');
+      background-size: cover; background-position: center 30%;
+      background-blend-mode: multiply; filter: saturate(0.55); }
+    #contact > .section { position: relative; z-index: 1; }
+    #contact h2 { color: #fff; }
+    #contact .contact-left h3 { color: #fff; }
+    #contact .contact-left > p { color: var(--gold2) !important; }
+    #contact .c-icon { background: rgba(255,255,255,.1); color: rgba(255,255,255,.7); }
+    #contact .c-txt { color: rgba(255,255,255,.55); }
+    #contact .c-note { background: rgba(255,255,255,.06); color: rgba(255,255,255,.45); border-left-color: var(--gold); }
+    #contact .fg label { color: rgba(255,255,255,.5); }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: start; }
+    .contact-left h3 { font-family: Georgia,serif; font-weight: 400; font-size: 1.5rem; margin-bottom: 14px; }
+    .contact-left > p { font-size: .93rem; color: var(--mid); line-height: 1.8; margin-bottom: 28px; }
+    .c-line { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .c-icon { width: 32px; height: 32px; border-radius: 7px; background: var(--cream2);
+      display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .c-txt { font-size: .85rem; color: var(--mid); }
+    .c-note { margin-top: 28px; padding: 16px 18px; border-left: 3px solid var(--gold);
+      background: var(--cream2); border-radius: 0 8px 8px 0;
+      font-size: .8rem; color: var(--mid); line-height: 1.7; }
+    .c-form { display: flex; flex-direction: column; gap: 14px; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fg { display: flex; flex-direction: column; gap: 5px; }
+    .fg label { font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--mid); }
+    .fg input, .fg select, .fg textarea { background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 6px; padding: 11px 14px; font-size: .9rem; font-family: inherit;
+      color: var(--text); outline: none; transition: border-color .2s; width: 100%; }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--gold); }
+    .fg textarea { resize: vertical; min-height: 88px; }
+    .fg select { appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A847C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 13px center; padding-right: 34px; }
+    .btn-send { background: var(--gold); color: #fff; border: none; padding: 14px 32px;
+      font-size: .88rem; font-weight: 600; letter-spacing: .05em; border-radius: 6px;
+      cursor: pointer; transition: background .2s, transform .15s; width: 100%; }
+    .btn-send:hover { background: var(--gold2); transform: translateY(-1px); }
+    .form-ok { display: none; background: #edf5e9; border: 1px solid #b8d9a8;
+      color: #2a6018; padding: 13px 16px; border-radius: 7px; font-size: .86rem; }
+    footer { background: var(--dark); padding: 40px 64px; display: flex;
+      flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+    .f-brand { font-family: Georgia,serif; font-size: .85rem; color: rgba(255,255,255,.45); }
+    .f-disc { font-size: .65rem; color: rgba(255,255,255,.2); max-width: 560px; line-height: 1.55; text-align: center; }
+    .f-copy { font-size: .72rem; color: rgba(255,255,255,.28); }
+    .fu { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .fu.vis { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; }
+    .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; }
+
+    /* ===================== MODAL ===================== */
+    #modal-overlay {
+      position: fixed; inset: 0; z-index: 400;
+      background: rgba(0,0,0,.9);
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+      opacity: 0; pointer-events: none; transition: opacity .25s ease;
+    }
+    #modal-overlay.open { opacity: 1; pointer-events: all; }
+    #modal-box {
+      background: var(--white); border-radius: 16px;
+      width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto; overflow-x: hidden;
+      position: relative; box-shadow: 0 32px 80px rgba(0,0,0,.55);
+      transform: scale(.96) translateY(14px); transition: transform .3s ease;
+    }
+    #modal-overlay.open #modal-box { transform: none; }
+    #modal-close {
+      position: absolute; top: 14px; right: 14px; z-index: 20;
+      background: rgba(0,0,0,.5); color: #fff; border: none; border-radius: 50%;
+      width: 36px; height: 36px; font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: background .2s;
+    }
+    #modal-close:hover { background: rgba(0,0,0,.78); }
+    .car-wrap {
+      position: relative; overflow: hidden;
+      background: var(--cream2);     /* cream, not black */
+      aspect-ratio: 16/9;
+    }
+    #modal-img {
+      width: 100%; height: 100%;
+      object-fit: cover;             /* fill container, crop if needed */
+      transition: opacity .22s ease;
+    }
+    .car-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,.42); color: #fff; border: none; border-radius: 50%;
+      width: 46px; height: 46px; font-size: 1.5rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s; z-index: 5; user-select: none;
+    }
+    .car-btn:hover { background: rgba(0,0,0,.7); }
+    #carPrev { left: 14px; } #carNext { right: 14px; }
+    .car-counter {
+      position: absolute; bottom: 14px; right: 14px;
+      background: rgba(0,0,0,.45); color: rgba(255,255,255,.88);
+      font-size: .72rem; padding: 4px 10px; border-radius: 20px; pointer-events: none;
+    }
+    .car-dots {
+      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 6px;
+    }
+    .car-dot { width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,.35); cursor: pointer;
+      transition: background .2s, transform .2s; }
+    .car-dot.active { background: #fff; transform: scale(1.25); }
+    .modal-info { padding: 32px 40px 40px; }
+    .modal-badge { display: inline-block; font-size: .65rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 20px; margin-bottom: 8px; }
+    .badge-done   { background: #edf5e9; color: #246018; }
+    .badge-active { background: #fef3e2; color: #8a5a00; }
+    #modal-title { font-family: Georgia,serif; font-weight: 400;
+      font-size: clamp(1.5rem,3vw,2rem); color: var(--text); margin-bottom: 4px; }
+    #modal-loc { font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; color: var(--gold); }
+    .modal-specs { display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden; }
+    .spec-item { background: var(--cream); padding: 20px 18px; }
+    .spec-val { font-family: Georgia,serif; font-size: 1.15rem; color: var(--text); margin-bottom: 5px; }
+    .spec-lbl { font-size: .66rem; letter-spacing: .09em; text-transform: uppercase; color: var(--light); }
+
+    @media (max-width: 1024px) {
+      .deal-nums { grid-template-columns: repeat(2,1fr); }
+      .team-grid  { grid-template-columns: repeat(3,1fr); }
+      .port-grid  { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      header { padding: 16px 24px; }
+      .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        flex-direction: column; align-items: center; justify-content: center;
+        background: rgba(14,13,10,.97); gap: 40px; z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.1rem; color: rgba(255,255,255,.85) !important; }
+      .nav-hamburger { display: flex; z-index: 101; position: relative; }
+      .logo small { display: none; }
+      .section { padding: 64px 24px; }
+      #cta-bridge { padding: 64px 24px; }
+      footer { padding: 36px 24px; flex-direction: column; text-align: center; }
+      .f-disc { text-align: left; }
+      h2 { font-size: 1.9rem; }
+      .hero-body { padding: 0 28px 60px; }
+      #hero h1 { font-size: 2.5rem; }
+      .strip-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
+      .stat-strip { grid-template-columns: repeat(3,1fr); }
+      .market-photo { height: 320px; }
+      .deal-nums { grid-template-columns: repeat(2,1fr); }
+      .deal-two { grid-template-columns: 1fr; gap: 40px; }
+      .prot-row { grid-template-columns: 40px 1fr; gap: 16px; } .prot-tag { display: none; } .prot-tick { display: none; }
+      .team-grid { grid-template-columns: repeat(2,1fr); }
+      .port-grid { grid-template-columns: 1fr; }
+      .terms-row { flex-direction: column; }
+      .term-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .term-item:last-child { border-bottom: none; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 44px; }
+      .row2 { grid-template-columns: 1fr; }
+      #modal-overlay { align-items: flex-end; padding: 0; }
+      #modal-box { border-radius: 20px 20px 0 0; max-height: 92vh; }
+      #modal-overlay.open #modal-box { transform: none; }
+      .car-wrap { aspect-ratio: 4/3; }
+      .modal-info { padding: 24px 24px 36px; }
+      .modal-specs { grid-template-columns: repeat(2,1fr); }
+      .car-btn { width: 38px; height: 38px; font-size: 1.2rem; }
+    }
+    @media (max-width: 480px) {
+      #hero h1 { font-size: 2rem; }
+      .deal-nums { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>emailjs.init("UCLiE2wcDzF95jYgj");</script>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="logo">Woodworth Developments<small>by EDSASE &nbsp;&#183;&nbsp; Park City, Utah</small></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#deal-bg" onclick="closeNav()">The Deal</a></li>
+    <li><a href="#portfolio-bg" onclick="closeNav()">Portfolio</a></li>
+    <li><a href="#protection" onclick="closeNav()">Protection</a></li>
+    <li><a href="#team" onclick="closeNav()">Team</a></li>
+    <li><a href="#contact" onclick="closeNav()">Invest</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <button class="nav-hamburger" id="navBurger" aria-label="Menu" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#contact" class="header-cta">Get the Deal Deck</a>
+  </div>
+</header>
+
+<section id="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="Images/img_03.jpg">
+  <source src="Front cover video.mp4" type="video/mp4">
+</video><div class="hero-ov"></div>
+  <div class="hero-body">
+    <div class="hero-tag">Park City, Utah &nbsp;&#183;&nbsp; Luxury Development &nbsp;&#183;&nbsp; Private Placement</div>
+    <h1>Woodworth Developments<br><em style="font-size:.55em;letter-spacing:.18em;font-style:normal;opacity:.8">BY EDSASE</em></h1>
+    <p class="hero-sub">Luxury homes built and sold in Park City. Target returns of 15-18%. You'll know exactly what you're walking into before you sign a thing.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Request the PPM</a>
+      <a href="#deal-bg" class="btn-outline">See the Deal</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-item"><b>$100K</b><span>Minimum</span></div>
+  <div class="strip-item"><b>15-18%</b><span>Target Estimated Return</span></div>
+  <div class="strip-item"><b>1.25-1.35x</b><span>Estimated Multiple</span></div>
+  <div class="strip-item"><b>15-22 mo</b><span>Investment Term</span></div>
+  <div class="strip-item"><b>7 Years</b><span>Park City Experience</span></div>
+</div>
+
+<div id="deal-bg"><div class="section">
+  <span class="eyebrow eyebrow-w fu">The Deal</span>
+  <h2 class="fu" id="deal">Clear terms.</h2>
+  <p class="deal-note fu">We find the land, build the home, sell it. You put in the capital. We handle everything else.</p>
+  <div class="deal-nums">
+    <div class="deal-num-card fu"><div class="d-lbl">Investment Term</div><div class="d-val">15-22 mo</div><div class="d-note">You know the timeline before you put in a cent</div></div>
+    <div class="deal-num-card fu d1"><div class="d-lbl">Target Estimated Return</div><div class="d-val">15-18%</div><div class="d-note">Based on what we've actually delivered</div></div>
+    <div class="deal-num-card fu d2"><div class="d-lbl">Estimated Multiple</div><div class="d-val">1.25-1.35x</div><div class="d-note">What comes back to you when the home sells</div></div>
+    <div class="deal-num-card fu d3"><div class="d-lbl">Minimum Investment</div><div class="d-val">$100K</div><div class="d-note">Between $100K and $500K. Accredited investors only.</div></div>
+  </div>
+  <div class="deal-two">
+    <div class="fu"><h3>How your capital is used</h3>
+      <ul class="check-list">
+        <li><span class="ck"></span>Land in Park City and nearby areas</li>
+        <li><span class="ck"></span>Architecture and design</li>
+        <li><span class="ck"></span>Construction with our local team</li>
+        <li><span class="ck"></span>Interior finishes</li>
+        <li><span class="ck"></span>Listing and sale</li>
+      </ul>
+    </div>
+    <div class="fu d1"><h3>From raise to exit</h3>
+      <div class="tl">
+        <div class="tl-step"><div class="tl-line"></div><div><div class="tl-period">Month 1</div><div class="tl-text">Money in escrow. Land under contract. Everything signed.</div></div></div>
+        <div class="tl-step"><div class="tl-line"></div><div><div class="tl-period">Months 1-3</div><div class="tl-text">Plans finalized, permits in, build crew ready to go.</div></div></div>
+        <div class="tl-step"><div class="tl-line"></div><div><div class="tl-period">Months 3-16</div><div class="tl-text">Under construction. You get an update every 90 days.</div></div></div>
+        <div class="tl-step"><div class="tl-line"></div><div><div class="tl-period">Months 14-22</div><div class="tl-text">Home sells. Returns go out.</div></div></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div id="market"><div class="section">
+  <span class="eyebrow fu">Why Park City</span>
+  <div class="market-wrap">
+    <h2 class="fu">Strong market.<br>Getting stronger. We're building right in the middle of it.</h2>
+    <div class="market-pills fu">
+      <div class="market-pill"><span class="pill-dot"></span><span>Tiger Woods is building a luxury development nearby. Prices are moving.</span></div>
+      <div class="market-pill"><span class="pill-dot"></span><span>The 2034 Winter Olympics land in Salt Lake City. Billions in infrastructure already in motion.</span></div>
+      <div class="market-pill"><span class="pill-dot"></span><span>Deer Valley is doubling its ski terrain. That kind of growth brings buyers.</span></div>
+    </div>
+  </div>
+  <div class="stat-strip fu d1">
+    <div class="stat-box"><div class="stat-box-num">$2.2B</div><div class="stat-box-lbl">Annual economic output</div></div>
+    <div class="stat-box"><div class="stat-box-num">$1.6B</div><div class="stat-box-lbl">Annual visitor spending</div></div>
+    <div class="stat-box"><div class="stat-box-num">2034</div><div class="stat-box-lbl">Winter Olympics, SLC</div></div>
+    <div class="stat-box"><div class="stat-box-num">35 min</div><div class="stat-box-lbl">From SLC Airport</div></div>
+    <div class="stat-box"><div class="stat-box-num">8+</div><div class="stat-box-lbl">World-class golf courses</div></div>
+    <div class="stat-box"><div class="stat-box-num">30+</div><div class="stat-box-lbl">Year-round amenities</div></div>
+  </div>
+</div></div>
+
+<div id="protection"><div class="section">
+  <span class="eyebrow fu">Investor Protection</span>
+  <h2 class="fu" style="color:#fff">Five layers<br>for YOU to <span style="color:var(--gold2)">trust</span> US.</h2>
+  <div class="prot-list">
+    <div class="prot-row fu"><span class="prot-num">01</span><span class="prot-name">Escrow Account</span><span class="prot-tag">Your money sits in a dedicated escrow account. We can only touch it for verified project expenses.</span><div class="prot-tick"></div></div>
+    <div class="prot-row fu"><span class="prot-num">02</span><span class="prot-name">PPM Documentation</span><span class="prot-tag">Before you put in a dollar, you get the full legal document. SEC Regulation D. Your rights, in writing.</span><div class="prot-tick"></div></div>
+    <div class="prot-row fu"><span class="prot-num">03</span><span class="prot-name">Real Estate Attorney</span><span class="prot-tag">A licensed real estate attorney is on every transaction.</span><div class="prot-tick"></div></div>
+    <div class="prot-row fu"><span class="prot-num">05</span><span class="prot-name">Quarterly Reports</span><span class="prot-tag">Every 90 days, a plain update. Where things stand, what's been spent. No jargon.</span><div class="prot-tick"></div></div>
+    <div class="prot-row fu"><span class="prot-num">06</span><span class="prot-name">Hard Asset Backing</span><span class="prot-tag">Your investment is backed by a real house on real land in Park City.</span><div class="prot-tick"></div></div>
+  </div>
+</div></div>
+
+<div id="team"><div class="section">
+  <span class="eyebrow fu">The Team</span>
+  <h2 class="fu">Everyone here is a specialist.</h2>
+  <p class="team-sub fu">Everyone here has one job. Nobody's doing everything.</p>
+  <div class="logo-marquee">
+  <div class="logo-track" id="logoTrack">
+    <div class="logo-item"><img src="Images/img_04.png" alt="BHHS Utah Properties"><span class="logo-role">Realty</span></div>
+    <div class="logo-item"><img src="Images/img_05.png" alt="Büdingen Architecture"><span class="logo-role">Architecture</span></div>
+    <div class="logo-item"><img src="Images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General Contractor</span></div>
+    <div class="logo-item"><img src="Images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp; CPA</span></div>
+    <div class="logo-item"><img src="Images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior Design</span></div>
+    <div class="logo-item"><img src="Images/img_04.png" alt="BHHS Utah Properties"><span class="logo-role">Realty</span></div>
+    <div class="logo-item"><img src="Images/img_05.png" alt="Büdingen Architecture"><span class="logo-role">Architecture</span></div>
+    <div class="logo-item"><img src="Images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General Contractor</span></div>
+    <div class="logo-item"><img src="Images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp; CPA</span></div>
+    <div class="logo-item"><img src="Images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior Design</span></div>
+  </div>
+  </div>
+</div></div>
+
+<div id="portfolio-bg"><div class="section">
+  <span class="eyebrow eyebrow-w fu">Track Record</span>
+  <h2 class="fu" id="portfolio">What we have built.</h2>
+  <p class="port-note fu">Seven years in Park City. These are the projects. Click any one to see the specs.</p>
+  <div class="port-grid">
+    <div class="port-card fu" onclick="openProject('hideout')" role="button" tabindex="0">
+      <div class="port-imgs">
+        <img src="Images/img_09_hc1.jpg" alt="Hideout Canyon aerial" loading="lazy">
+        <img src="Images/img_10_hc2.jpg"   alt="Hideout Canyon home"   loading="lazy">
+      </div>
+      <div class="port-info">
+        <div><div class="port-name">Hideout Canyon</div><div class="port-loc">Hideout, Utah</div></div>
+        <div class="port-arrow">&#8599;</div>
+      </div>
+    </div>
+    <div class="port-card fu d1" onclick="openProject('soaring')" role="button" tabindex="0">
+      <div class="port-imgs">
+        <img src="Images/img_03.jpg" alt="Soaring Hawk exterior" loading="lazy">
+        <img src="Images/img_12_sh3.jpg" alt="Soaring Hawk interior" loading="lazy">
+      </div>
+      <div class="port-info">
+        <div><div class="port-name">Soaring Hawk</div><div class="port-loc">Park City Area, Utah</div></div>
+        <div class="port-arrow">&#8599;</div>
+      </div>
+    </div>
+    <div class="port-card fu d2" onclick="openProject('golden')" role="button" tabindex="0">
+      <div class="port-imgs">
+        <img src="Images/img_14_ge1.jpg"   alt="Golden Eagle view"   loading="lazy">
+        <img src="Images/img_15_ge2.jpg" alt="Golden Eagle aerial" loading="lazy">
+      </div>
+      <div class="port-info">
+        <div><div class="port-name">Golden Eagle</div><div class="port-loc">Park City Area, Utah</div></div>
+        <div class="port-arrow">&#8599;</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div id="cta-bridge">
+  <span class="eyebrow eyebrow-w fu" style="display:block;margin-bottom:14px">Current Opportunity</span>
+  <h2 class="fu">We're raising now.<br>Spots are limited.</h2>
+  <p class="fu">The team's in place. The plan is ready. If the numbers work for you, let's have a conversation.</p>
+  <div class="terms-row fu">
+    <div class="term-item"><span class="term-val">15-22 mo</span><span class="term-lbl">Term</span></div>
+    <div class="term-item"><span class="term-val">15-18%</span><span class="term-lbl">Estimated Return</span></div>
+    <div class="term-item"><span class="term-val">1.25-1.35x</span><span class="term-lbl">Multiple</span></div>
+    <div class="term-item"><span class="term-val">$100K</span><span class="term-lbl">Minimum</span></div>
+  </div>
+  <a href="#contact" class="btn-primary fu" style="font-size:.92rem;padding:15px 40px">Schedule a Call</a>
+</div>
+
+<div id="contact"><div class="section">
+  <span class="eyebrow fu">Get in Touch</span>
+  <h2 class="fu">Let's talk numbers.</h2>
+  <div class="contact-wrap">
+    <div class="fu">
+      <div class="c-line"><div class="c-icon">&#128205;</div><span class="c-txt">Park City, Utah and surrounding communities</span></div>
+      <div class="c-line"><div class="c-icon">&#9993;&#65039;</div><span class="c-txt">sebastiansanchwb@gmail.com</span></div>
+      <div class="c-note">We work with accredited investors only. Want to see the PPM or the full legal structure first? We'll send everything over. No commitment required.</div>
+    </div>
+    <div class="fu d1">
+      <form class="c-form" id="cForm">
+        <div class="row2">
+          <div class="fg"><label>First Name</label><input type="text" name="fname" placeholder="John" required></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="lname" placeholder="Smith" required></div>
+        </div>
+        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
+        <div class="fg"><label>Phone (Optional)</label><input type="tel" name="phone" placeholder="+1 (801) 000-0000"></div>
+        <div class="fg"><label>Investment Range</label>
+          <select name="range" required>
+            <option value="" disabled selected>Select a range</option>
+            <option>$100,000 to $200,000</option>
+            <option>$200,000 to $350,000</option>
+            <option>$350,000 to $500,000</option>
+            <option>$500,000 and above</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message (Optional)</label><textarea name="msg" placeholder="Questions, timeline, or anything else..."></textarea></div>
+        <button type="submit" class="btn-send">Send Message</button>
+        <div class="form-ok" id="formOk">Got it. We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</div></div>
+
+<footer>
+  <div class="f-brand">Woodworth Developments by EDSASE</div>
+  <div class="f-disc">Not an offer to sell securities. Open to accredited investors only under SEC Regulation D. Returns are projections, not guarantees. Past performance doesn't predict future results.</div>
+  <div class="f-copy">Park City, Utah &#183; 2025</div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal-overlay" role="dialog" aria-modal="true">
+  <div id="modal-box">
+    <button id="modal-close" aria-label="Close">&times;</button>
+    <div class="car-wrap" id="carWrap">
+      <img id="modal-img" src="" alt="Project photo">
+      <button class="car-btn" id="carPrev">&#8249;</button>
+      <button class="car-btn" id="carNext">&#8250;</button>
+      <div class="car-counter"><span id="carIdx">1</span>&nbsp;/&nbsp;<span id="carTotal">1</span></div>
+      <div class="car-dots" id="carDots"></div>
+    </div>
+    <div class="modal-info">
+      <div id="modal-badge" class="modal-badge badge-done">Completed</div>
+      <h2 id="modal-title" style="font-size:clamp(1.5rem,3vw,2rem);margin-bottom:4px"></h2>
+      <div id="modal-loc"></div>
+      <div class="modal-specs" id="modal-specs"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const _I = {
+  hc1:"Images/img_09_hc1.jpg", hc2:"Images/img_10_hc2.jpg",
+  sh1:"Images/img_03.jpg",    sh2:"Images/img_11_sh2.jpg", sh3:"Images/img_12_sh3.jpg", sh4:"Images/img_13_sh4.jpg",
+  ge1:"Images/img_14_ge1.jpg",   ge2:"Images/img_15_ge2.jpg", ge3:"Images/img_16_ge3.jpg"
+};
+const P = {
+  hideout:{name:"Hideout Canyon",location:"Hideout, Utah",status:"Completed",sc:"badge-done",
+    images:[_I.hc1,_I.hc2],
+    specs:[{v:"6,534 sq ft",l:"Lot Area"},{v:"3,140 sq ft",l:"Home Size"},{v:"4 en-suite",l:"Bedrooms"},{v:"5",l:"Bathrooms"}]},
+  soaring:{name:"Soaring Hawk",location:"Park City Area, Utah",status:"Completed",sc:"badge-done",
+    images:[_I.sh1,_I.sh2,_I.sh3,_I.sh4],
+    specs:[{v:"12,197 sq ft",l:"Lot Area"},{v:"4,246 sq ft",l:"Home Size"},{v:"4 en-suite",l:"Bedrooms"},{v:"6",l:"Bathrooms"}]},
+  golden:{name:"Golden Eagle",location:"Park City Area, Utah",status:"In Development",sc:"badge-active",
+    images:[_I.ge1,_I.ge2,_I.ge3],
+    specs:[{v:"24,394 sq ft",l:"Lot Area"},{v:"4,743 sq ft",l:"Home Size"},{v:"5 en-suite",l:"Bedrooms"},{v:"7",l:"Bathrooms"}]}
+};
+let cur=[],idx=0,tx=0;
+function openProject(k){
+  const p=P[k]; cur=p.images; idx=0;
+  document.getElementById("modal-title").textContent=p.name;
+  document.getElementById("modal-loc").textContent=p.location;
+  document.getElementById("modal-loc").style.cssText="font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gold)";
+  const b=document.getElementById("modal-badge"); b.textContent=p.status; b.className="modal-badge "+p.sc;
+  document.getElementById("modal-specs").innerHTML=p.specs.map(s=>"<div class='spec-item'><div class='spec-val'>"+s.v+"</div><div class='spec-lbl'>"+s.l+"</div></div>").join("");
+  buildDots(); setSlide(0,false);
+  document.getElementById("modal-overlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeModal(){document.getElementById("modal-overlay").classList.remove("open");document.body.style.overflow="";}
+function setSlide(i,anim){
+  idx=(i+cur.length)%cur.length;
+  const img=document.getElementById("modal-img");
+  if(anim){img.style.opacity="0";setTimeout(()=>{img.src=cur[idx];img.style.opacity="1";},200);}
+  else{img.src=cur[idx];img.style.opacity="1";}
+  document.getElementById("carIdx").textContent=idx+1;
+  document.getElementById("carTotal").textContent=cur.length;
+  document.querySelectorAll(".car-dot").forEach((d,i)=>d.classList.toggle("active",i===idx));
+  const show=cur.length>1;
+  document.getElementById("carPrev").style.display=show?"":"none";
+  document.getElementById("carNext").style.display=show?"":"none";
+}
+function buildDots(){
+  const el=document.getElementById("carDots");
+  el.innerHTML=cur.map((_,i)=>"<span class='car-dot"+(i===0?" active":"")+"' data-i='"+i+"'></span>").join("");
+  el.style.display=cur.length>1?"":"none";
+  el.querySelectorAll(".car-dot").forEach(d=>d.addEventListener("click",()=>setSlide(parseInt(d.dataset.i),true)));
+}
+document.getElementById("modal-close").addEventListener("click",closeModal);
+document.getElementById("modal-overlay").addEventListener("click",e=>{if(e.target===document.getElementById("modal-overlay"))closeModal();});
+document.getElementById("carPrev").addEventListener("click",()=>setSlide(idx-1,true));
+document.getElementById("carNext").addEventListener("click",()=>setSlide(idx+1,true));
+document.addEventListener("keydown",e=>{
+  if(!document.getElementById("modal-overlay").classList.contains("open"))return;
+  if(e.key==="Escape")closeModal();
+  if(e.key==="ArrowLeft")setSlide(idx-1,true);
+  if(e.key==="ArrowRight")setSlide(idx+1,true);
+});
+document.querySelectorAll(".port-card[tabindex]").forEach(c=>c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" ")c.click();}));
+const cw=document.getElementById("carWrap");
+cw.addEventListener("touchstart",e=>{tx=e.touches[0].clientX;},{passive:true});
+cw.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>48)setSlide(d>0?idx-1:idx+1,true);},{passive:true});
+const hdr=document.getElementById("hdr");
+window.addEventListener("scroll",()=>hdr.classList.toggle("scrolled",window.scrollY>40),{passive:true});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");}),{threshold:0.1,rootMargin:"0px 0px -28px 0px"});
+document.querySelectorAll(".fu").forEach(el=>obs.observe(el));
+document.querySelectorAll("a[href^='#']").forEach(a=>a.addEventListener("click",e=>{const t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-68,behavior:"smooth"});}}));
+document.getElementById("cForm").addEventListener("submit",function(e){
+  e.preventDefault();const btn=this.querySelector(".btn-send");
+  btn.textContent="Sending...";btn.disabled=true;
+  var params={
+    from_name:this.querySelector('[name="fname"]').value+' '+this.querySelector('[name="lname"]').value,
+    from_email:this.querySelector('[name="email"]').value,
+    phone:this.querySelector('[name="phone"]').value||'Not provided',
+    investment_range:this.querySelector('[name="range"]').value||'Not specified',
+    message:this.querySelector('[name="msg"]').value||'No message'
+  };
+  emailjs.send('service_twgtu44','template_tf07rzd',params)
+    .then(function(){
+      document.getElementById("formOk").style.display="block";
+      document.getElementById("cForm").reset();
+      btn.textContent="Send Message";btn.disabled=false;
+    },function(err){
+      alert("Error: " + JSON.stringify(err));
+      btn.textContent="Send Message";btn.disabled=false;
+    }).catch(function(err){
+      alert("Caught: " + JSON.stringify(err));
+      btn.textContent="Send Message";btn.disabled=false;
+    });
+});
+  function toggleNav(){
+    var b=document.getElementById('navBurger');
+    var n=document.getElementById('navLinks');
+    b.classList.toggle('open');
+    n.classList.toggle('open');
+    document.body.style.overflow=n.classList.contains('open')?'hidden':'';
+  }
+  function closeNav(){
+    document.getElementById('navBurger').classList.remove('open');
+    document.getElementById('navLinks').classList.remove('open');
+    document.body.style.overflow='';
+  }
+</script>
+</body>
+</html>
