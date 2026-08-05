@@ -1,0 +1,31 @@
+/* Styles specific to protection.html */
+.prot-hero { padding: 160px 64px 80px; max-width: 1000px; margin: 0 auto; }
+.prot-sub { font-size: 1rem; color: rgba(255,255,255,.5);
+  max-width: 520px; line-height: 1.75; }
+
+.prot-list { max-width: 1000px; margin: 0 auto;
+  padding: 0 64px 120px; border-top: 1px solid var(--border); }
+.prot-row {
+  display: grid; grid-template-columns: 60px 1fr 1.8fr;
+  align-items: start; gap: 32px; padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity .7s ease-out, transform .7s ease-out;
+}
+.prot-row.vis { opacity: 1; transform: none; }
+.prot-num { font-family: Georgia, serif; font-size: 1rem;
+  color: var(--gold); letter-spacing: .1em; padding-top: 3px; }
+.prot-name { font-size: 1.15rem; font-weight: 700; color: #fff; line-height: 1.3; }
+.prot-tag { font-size: .9rem; color: rgba(255,255,255,.45); line-height: 1.7; }
+
+.prot-footer { text-align: center; padding: 48px 64px;
+  border-top: 1px solid var(--border); }
+.prot-footer p { font-size: .78rem; color: rgba(255,255,255,.3);
+  max-width: 500px; margin: 0 auto 24px; line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .prot-hero { padding: 120px 24px 60px; }
+  .prot-list { padding: 0 24px 80px; }
+  .prot-row { grid-template-columns: 44px 1fr; gap: 16px; }
+  .prot-tag { grid-column: 2; }
+}

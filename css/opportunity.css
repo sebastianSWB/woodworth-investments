@@ -1,0 +1,40 @@
+/* Styles specific to opportunity.html */
+.opp-hero { padding: 160px 64px 80px; max-width: 1000px; margin: 0 auto; }
+.opp-sub { font-size: 1rem; color: rgba(255,255,255,.5);
+  max-width: 520px; line-height: 1.75; margin-bottom: 64px; }
+
+.metrics { max-width: 1000px; margin: 0 auto;
+  padding: 0 64px; display: flex; gap: 0;
+  border-top: 1px solid var(--border);
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity .7s ease-out, transform .7s ease-out; }
+.metrics.vis { opacity: 1; transform: none; }
+.metric { flex: 1; padding: 44px 36px 44px 0; }
+.metric + .metric { padding-left: 36px; border-left: 1px solid var(--border); }
+.m-val { font-family: 'Inter', sans-serif; font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  color: var(--gold2); line-height: 1; margin-bottom: 12px; font-weight: 800; }
+.m-lbl { font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(255,255,255,.3); }
+
+.opp-details { max-width: 1000px; margin: 0 auto;
+  padding: 80px 64px 120px; }
+.detail-row { padding: 36px 0; border-bottom: 1px solid var(--border);
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity .7s ease-out, transform .7s ease-out; }
+.detail-row.vis { opacity: 1; transform: none; }
+.d-label { font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px; }
+.d-text { font-size: .95rem; color: rgba(255,255,255,.55); line-height: 1.75;
+  max-width: 620px; }
+
+.opp-cta { text-align: center; padding: 0 64px 100px; }
+.opp-cta p { font-size: .88rem; color: rgba(255,255,255,.35);
+  max-width: 420px; margin: 0 auto 28px; line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .opp-hero { padding: 120px 24px 60px; }
+  .metrics { padding: 0 24px; flex-wrap: wrap; }
+  .metric { flex: 1 1 45%; }
+  .opp-details { padding: 60px 24px 80px; }
+  .opp-cta { padding: 0 24px 80px; }
+}
