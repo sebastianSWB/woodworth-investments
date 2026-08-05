@@ -1,265 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woodworth Developments | Luxury Investment, Park City Utah</title>
+  <title> Woodworth & Quinn Developments| Luxury Investment, Park City Utah</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>emailjs.init("UCLiE2wcDzF95jYgj");</script>
 </head>
+
 <body>
 
-<header id="hdr">
-  <div class="logo"><div class="logo-icon" role="img" aria-label="W"></div><div>Woodworth Developments<small>by EDSASE &nbsp;&#183;&nbsp; Park City, Utah</small></div></div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#deal-bg" onclick="closeNav()">The Deal</a></li>
-    <li><a href="#portfolio-bg" onclick="closeNav()">Portfolio</a></li>
-    <li><a href="protection.html" onclick="closeNav()">Investors Protection</a></li>
-    <li><a href="opportunity.html" onclick="closeNav()">Current Opportunity</a></li>
-    <li><a href="#team" onclick="closeNav()">Team</a></li>
-    <li><a href="#contact" onclick="closeNav()">Invest</a></li>
-  </ul>
-  <div style="display:flex;align-items:center;gap:20px;">
-    <button class="nav-hamburger" id="navBurger" aria-label="Menu" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </button>
-    <a href="#contact" class="header-cta">Get the Deal Deck</a>
-  </div>
-</header>
-
-<section id="hero">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/img_03.jpg">
-  <source src="Front cover video.mp4" type="video/mp4">
-</video><div class="hero-ov"></div>
-  <div class="hero-body">
-    <div class="hero-tag">Park City, Utah &nbsp;&#183;&nbsp; Luxury Development &nbsp;&#183;&nbsp; Private Placement</div>
-    <h1>Woodworth Developments<br><em style="font-size:.55em;letter-spacing:.18em;font-style:normal;opacity:.8">BY EDSASE</em></h1>
-    <p class="hero-sub">Woodworth Developments builds luxury homes in Park City, Utah, and gives accredited investors a direct way in. Fixed terms, clear returns, and a team that has successfully done it before.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Start Investing</a>
-      <button onclick="openPartnerModal()" class="btn-outline" style="cursor:pointer;background:none;border:1.5px solid rgba(255,255,255,.5);color:#fff;padding:13px 32px;font-size:.88rem;font-weight:500;letter-spacing:.04em;border-radius:5px;font-family:inherit;">Partner with us</button>
+  <header id="hdr">
+    <div class="logo">
+      <div class="logo-icon" role="img" aria-label="W"></div>
+      <div>Woodworth Developments<small>by EDSASE &nbsp;&#183;&nbsp; Park City, Utah</small></div>
     </div>
-  </div>
-</section>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#deal-bg" onclick="closeNav()">The Deal</a></li>
+      <li><a href="#portfolio-bg" onclick="closeNav()">Portfolio</a></li>
+      <li><a href="protection.html" onclick="closeNav()">Investors Protection</a></li>
+      <li><a href="opportunity.html" onclick="closeNav()">Current Opportunity</a></li>
+      <li><a href="#team" onclick="closeNav()">Team</a></li>
+      <li><a href="#contact" onclick="closeNav()">Invest</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <button class="nav-hamburger" id="navBurger" aria-label="Menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#contact" class="header-cta">Get the Deal Deck</a>
+    </div>
+  </header>
 
-<div class="strip">
-  <div class="strip-item"><b>$100K</b><span>Minimum</span></div>
-  <div class="strip-item"><b>15-18%</b><span>Target Estimated Return</span></div>
-  <div class="strip-item"><b>1.25-1.35x</b><span>Estimated Multiple</span></div>
-  <div class="strip-item"><b>15-22 mo</b><span>Investment Term</span></div>
-  <div class="strip-item"><b>7 Years</b><span>Park City Experience</span></div>
-</div>
-
-<div id="deal-bg"><div class="section">
-  <span class="eyebrow eyebrow-w fu">The Deal</span>
-  <h2 class="fu" id="deal">Clear terms.</h2>
-  <p class="deal-note fu">We find the land, build the home, sell it. You put in the capital. We handle everything else.</p>
-  <div class="deal-nums">
-    <div class="deal-num-card fu"><div class="d-lbl">Investment Term</div><div class="d-val">15-22 mo</div><div class="d-note">You know the timeline before you put in a cent</div></div>
-    <div class="deal-num-card fu d1"><div class="d-lbl">Target Estimated Return</div><div class="d-val">15-18%</div><div class="d-note">Based on what we've actually delivered</div></div>
-    <div class="deal-num-card fu d2"><div class="d-lbl">Estimated Multiple</div><div class="d-val">1.25-1.35x</div><div class="d-note">What comes back to you when the home sells</div></div>
-    <div class="deal-num-card fu d3"><div class="d-lbl">Minimum Investment</div><div class="d-val">$100K</div><div class="d-note">Between $100K and $500K. Accredited investors only.</div></div>
-  </div>
-  <div class="deal-two">
-    <div class="fu">
-      <button class="acc-btn" onclick="toggleAcc(this)">How your capital is used<span class="acc-arrow">&#9660;</span></button>
-      <div class="acc-body">
-        <ul class="check-list" style="padding-top:8px;">
-          <li>Land in Park City and nearby areas</li>
-          <li>Architecture and design</li>
-          <li>Construction with our local team</li>
-          <li>Interior finishes</li>
-          <li>Listing and sale</li>
-        </ul>
+  <section id="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/img_03.jpg">
+      <source src="Front cover video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-ov"></div>
+    <div class="hero-body">
+      <div class="hero-tag">Park City, Utah &nbsp;&#183;&nbsp; Luxury Development &nbsp;&#183;&nbsp; Private Placement
+      </div>
+      <h1>Woodworth Developments<br><em style="font-size:.55em;letter-spacing:.18em;font-style:normal;opacity:.8">BY
+          EDSASE</em></h1>
+      <p class="hero-sub">Woodworth Developments builds luxury homes in Park City, Utah, and gives accredited investors
+        a direct way in. Fixed terms, clear returns, and a team that has successfully done it before.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Start Investing</a>
+        <button onclick="openPartnerModal()" class="btn-outline"
+          style="cursor:pointer;background:none;border:1.5px solid rgba(255,255,255,.5);color:#fff;padding:13px 32px;font-size:.88rem;font-weight:500;letter-spacing:.04em;border-radius:5px;font-family:inherit;">Partner
+          with us</button>
       </div>
     </div>
-    <div class="fu d1">
-      <button class="acc-btn" onclick="toggleAcc(this)">From raise to exit<span class="acc-arrow">&#9660;</span></button>
-      <div class="acc-body">
-        <div class="tl" style="padding-top:8px;">
-          <div class="tl-step"><div class="tl-period">Month 1</div><div class="tl-text">Money in escrow. Land under contract. Everything signed.</div></div>
-          <div class="tl-step"><div class="tl-period">Months 1–3</div><div class="tl-text">Plans finalized, permits in, build crew ready to go.</div></div>
-          <div class="tl-step"><div class="tl-period">Months 3–16</div><div class="tl-text">Under construction. You get an update every 30 days.</div></div>
-          <div class="tl-step"><div class="tl-period">Months 14–22</div><div class="tl-text">Home sells. Returns go out.</div></div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-item"><b>$100K</b><span>Minimum</span></div>
+    <div class="strip-item"><b>15-18%</b><span>Target Estimated Return</span></div>
+    <div class="strip-item"><b>1.25-1.35x</b><span>Estimated Multiple</span></div>
+    <div class="strip-item"><b>15-22 mo</b><span>Investment Term</span></div>
+    <div class="strip-item"><b>7 Years</b><span>Park City Experience</span></div>
+  </div>
+
+  <div id="deal-bg">
+    <div class="section">
+      <span class="eyebrow eyebrow-w fu">The Deal</span>
+      <h2 class="fu" id="deal">Clear terms.</h2>
+      <p class="deal-note fu">We find the land, build the home, sell it. You put in the capital. We handle everything
+        else.</p>
+      <div class="deal-nums">
+        <div class="deal-num-card fu">
+          <div class="d-lbl">Investment Term</div>
+          <div class="d-val">15-22 mo</div>
+          <div class="d-note">You know the timeline before you put in a cent</div>
+        </div>
+        <div class="deal-num-card fu d1">
+          <div class="d-lbl">Target Estimated Return</div>
+          <div class="d-val">15-18%</div>
+          <div class="d-note">Based on what we've actually delivered</div>
+        </div>
+        <div class="deal-num-card fu d2">
+          <div class="d-lbl">Estimated Multiple</div>
+          <div class="d-val">1.25-1.35x</div>
+          <div class="d-note">What comes back to you when the home sells</div>
+        </div>
+        <div class="deal-num-card fu d3">
+          <div class="d-lbl">Minimum Investment</div>
+          <div class="d-val">$100K</div>
+          <div class="d-note">Between $100K and $500K. Accredited investors only.</div>
+        </div>
+      </div>
+      <div class="deal-two">
+        <div class="fu">
+          <button class="acc-btn" onclick="toggleAcc(this)">How your capital is used<span
+              class="acc-arrow">&#9660;</span></button>
+          <div class="acc-body">
+            <ul class="check-list" style="padding-top:8px;">
+              <li>Land in Park City and nearby areas</li>
+              <li>Architecture and design</li>
+              <li>Construction with our local team</li>
+              <li>Interior finishes</li>
+              <li>Listing and sale</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fu d1">
+          <button class="acc-btn" onclick="toggleAcc(this)">From raise to exit<span
+              class="acc-arrow">&#9660;</span></button>
+          <div class="acc-body">
+            <div class="tl" style="padding-top:8px;">
+              <div class="tl-step">
+                <div class="tl-period">Month 1</div>
+                <div class="tl-text">Money in escrow. Land under contract. Everything signed.</div>
+              </div>
+              <div class="tl-step">
+                <div class="tl-period">Months 1–3</div>
+                <div class="tl-text">Plans finalized, permits in, build crew ready to go.</div>
+              </div>
+              <div class="tl-step">
+                <div class="tl-period">Months 3–16</div>
+                <div class="tl-text">Under construction. You get an update every 30 days.</div>
+              </div>
+              <div class="tl-step">
+                <div class="tl-period">Months 14–22</div>
+                <div class="tl-text">Home sells. Returns go out.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div></div>
 
-<div id="market"><div class="market-bg"></div><div class="section">
-  <span class="eyebrow fu-left">Why Park City</span>
-  <div class="market-wrap">
-    <h2 class="fu-left">Why We Chose Park City and Its Surrounding Areas.</h2>
-    <div class="market-pills fu-left">
-      <div class="market-pill"><span class="pill-dot"></span><span>Tiger Woods is building a luxury development nearby. Prices are moving.</span></div>
-      <div class="market-pill"><span class="pill-dot"></span><span>The 2034 Winter Olympics land in Salt Lake City. Billions in infrastructure already in motion.</span></div>
-      <div class="market-pill"><span class="pill-dot"></span><span>Deer Valley is doubling its ski terrain. That kind of growth brings buyers.</span></div>
-    </div>
-  </div>
-  <div class="stat-strip fu-right">
-    <div class="stat-box"><div class="stat-box-num">$2.2B</div><div class="stat-box-lbl">Annual economic output</div></div>
-    <div class="stat-box"><div class="stat-box-num">$1.6B</div><div class="stat-box-lbl">Annual visitor spending</div></div>
-    <div class="stat-box"><div class="stat-box-num">2034</div><div class="stat-box-lbl">Winter Olympics, SLC</div></div>
-    <div class="stat-box"><div class="stat-box-num">35 min</div><div class="stat-box-lbl">From SLC Airport</div></div>
-    <div class="stat-box"><div class="stat-box-num">8+</div><div class="stat-box-lbl">World-class golf courses</div></div>
-    <div class="stat-box"><div class="stat-box-num">30+</div><div class="stat-box-lbl">Year-round amenities</div></div>
-  </div>
-</div></div>
-
-
-<div id="team"><div class="section">
-  <span class="eyebrow fu">The Team</span>
-  <h2 class="fu">Everyone here is a specialist.</h2>
-  <p class="team-sub fu">Everyone here has one job. Nobody's doing everything.</p>
-  <div class="logo-marquee">
-  <div class="logo-track" id="logoTrack">
-    <div class="logo-item"><img src="images/img_04.png" alt="BHHS Utah Properties"><span class="logo-role">Realty</span></div>
-    <div class="logo-item"><img src="images/img_05.png" alt="Büdingen Architecture"><span class="logo-role">Architecture</span></div>
-    <div class="logo-item"><img src="images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General Contractor</span></div>
-    <div class="logo-item"><img src="images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp; CPA</span></div>
-    <div class="logo-item"><img src="images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior Design</span></div>
-    <div class="logo-item"><img src="images/img_04.png" alt="BHHS Utah Properties"><span class="logo-role">Realty</span></div>
-    <div class="logo-item"><img src="images/img_05.png" alt="Büdingen Architecture"><span class="logo-role">Architecture</span></div>
-    <div class="logo-item"><img src="images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General Contractor</span></div>
-    <div class="logo-item"><img src="images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp; CPA</span></div>
-    <div class="logo-item"><img src="images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior Design</span></div>
-  </div>
-  </div>
-</div></div>
-
-<div id="portfolio-bg"><div class="section">
-  <span class="eyebrow eyebrow-w fu">Track Record</span>
-  <h2 class="fu" id="portfolio">What we have built.</h2>
-  <p class="port-note fu">Seven years in Park City. These are the projects. Click any one to see the specs.</p>
-  <div class="port-grid">
-    <div class="port-card fu" onclick="openProject('hideout')" role="button" tabindex="0">
-      <div class="port-imgs">
-        <img src="images/img_09_hc1.jpg" alt="Hideout Canyon aerial" loading="lazy">
-        <img src="images/img_10_hc2.jpg"   alt="Hideout Canyon home"   loading="lazy">
-      </div>
-      <div class="port-info">
-        <div><div class="port-name">Hideout Canyon</div><div class="port-loc">Hideout, Utah</div></div>
-        <div class="port-arrow">&#8599;</div>
-      </div>
-    </div>
-    <div class="port-card fu d1" onclick="openProject('soaring')" role="button" tabindex="0">
-      <div class="port-imgs">
-        <img src="images/img_03.jpg" alt="Soaring Hawk exterior" loading="lazy">
-        <img src="images/img_12_sh3.jpg" alt="Soaring Hawk interior" loading="lazy">
-      </div>
-      <div class="port-info">
-        <div><div class="port-name">Soaring Hawk</div><div class="port-loc">Park City Area, Utah</div></div>
-        <div class="port-arrow">&#8599;</div>
-      </div>
-    </div>
-    <div class="port-card fu d2" onclick="openProject('golden')" role="button" tabindex="0">
-      <div class="port-imgs">
-        <img src="images/img_14_ge1.jpg"   alt="Golden Eagle view"   loading="lazy">
-        <img src="images/img_15_ge2.jpg" alt="Golden Eagle aerial" loading="lazy">
-      </div>
-      <div class="port-info">
-        <div><div class="port-name">Golden Eagle</div><div class="port-loc">Park City Area, Utah</div></div>
-        <div class="port-arrow">&#8599;</div>
-      </div>
-    </div>
-  </div>
-</div></div>
-
-<div id="cta-bridge">
-  <div class="cta-logo" role="img" aria-label="Woodworth"></div>
-  <h2>Let's build your next investment.</h2>
-  <p>Park City luxury homes. Clear terms. A team that delivers.</p>
-  <a href="#contact" class="btn-primary" style="position:relative;z-index:1;">Start Investing</a>
-</div>
-
-<div id="contact"><div class="section">
-  <span class="eyebrow fu">Get in Touch</span>
-  <h2 class="fu">Let's talk numbers.</h2>
-  <div class="contact-wrap">
-    <div class="fu">
-      <div class="c-line"><div class="c-icon">&#128205;</div><span class="c-txt">Park City, Utah and surrounding communities</span></div>
-      <div class="c-line"><div class="c-icon">&#9993;&#65039;</div><span class="c-txt">sebastiansanchwb@gmail.com</span></div>
-      <div class="c-note">We work with accredited investors only. Want to see the PPM or the full legal structure first? We'll send everything over. No commitment required.</div>
-    </div>
-    <div class="fu d1">
-      <form class="c-form" id="cForm">
-        <div class="row2">
-          <div class="fg"><label>First Name</label><input type="text" name="fname" placeholder="John" required></div>
-          <div class="fg"><label>Last Name</label><input type="text" name="lname" placeholder="Smith" required></div>
+  <div id="market">
+    <div class="market-bg"></div>
+    <div class="section">
+      <span class="eyebrow fu-left">Why Park City</span>
+      <div class="market-wrap">
+        <h2 class="fu-left">Why We Chose Park City and Its Surrounding Areas.</h2>
+        <div class="market-pills fu-left">
+          <div class="market-pill"><span class="pill-dot"></span><span>Tiger Woods is building a luxury development
+              nearby. Prices are moving.</span></div>
+          <div class="market-pill"><span class="pill-dot"></span><span>The 2034 Winter Olympics land in Salt Lake City.
+              Billions in infrastructure already in motion.</span></div>
+          <div class="market-pill"><span class="pill-dot"></span><span>Deer Valley is doubling its ski terrain. That
+              kind of growth brings buyers.</span></div>
         </div>
-        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
-        <div class="fg"><label>Phone (Optional)</label><input type="tel" name="phone" placeholder="+1 (801) 000-0000"></div>
-        <div class="fg"><label>Investment Range</label>
-          <select name="range" required>
-            <option value="" disabled selected>Select a range</option>
-            <option>$100,000 to $200,000</option>
-            <option>$200,000 to $350,000</option>
-            <option>$350,000 to $500,000</option>
-            <option>$500,000 and above</option>
+      </div>
+      <div class="stat-strip fu-right">
+        <div class="stat-box">
+          <div class="stat-box-num">$2.2B</div>
+          <div class="stat-box-lbl">Annual economic output</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">$1.6B</div>
+          <div class="stat-box-lbl">Annual visitor spending</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">2034</div>
+          <div class="stat-box-lbl">Winter Olympics, SLC</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">35 min</div>
+          <div class="stat-box-lbl">From SLC Airport</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">8+</div>
+          <div class="stat-box-lbl">World-class golf courses</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">30+</div>
+          <div class="stat-box-lbl">Year-round amenities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="team">
+    <div class="section">
+      <span class="eyebrow fu">The Team</span>
+      <h2 class="fu">Everyone here is a specialist.</h2>
+      <p class="team-sub fu">Everyone here has one job. Nobody's doing everything.</p>
+      <div class="logo-marquee">
+        <div class="logo-track" id="logoTrack">
+          <div class="logo-item"><img src="images/img_04.png" alt="BHHS Utah Properties"><span
+              class="logo-role">Realty</span></div>
+          <div class="logo-item"><img src="images/img_05.png" alt="Büdingen Architecture"><span
+              class="logo-role">Architecture</span></div>
+          <div class="logo-item"><img src="images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General
+              Contractor</span></div>
+          <div class="logo-item"><img src="images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp;
+              CPA</span></div>
+          <div class="logo-item"><img src="images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior
+              Design</span></div>
+          <div class="logo-item"><img src="images/img_04.png" alt="BHHS Utah Properties"><span
+              class="logo-role">Realty</span></div>
+          <div class="logo-item"><img src="images/img_05.png" alt="Büdingen Architecture"><span
+              class="logo-role">Architecture</span></div>
+          <div class="logo-item"><img src="images/img_06.png" alt="Jorgenson Builders"><span class="logo-role">General
+              Contractor</span></div>
+          <div class="logo-item"><img src="images/img_07.svg" alt="FirstPurpose"><span class="logo-role">Tax &amp;
+              CPA</span></div>
+          <div class="logo-item"><img src="images/img_08.png" alt="Milieu Design"><span class="logo-role">Interior
+              Design</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio-bg">
+    <div class="section">
+      <span class="eyebrow eyebrow-w fu">Track Record</span>
+      <h2 class="fu" id="portfolio">What we have built.</h2>
+      <p class="port-note fu">Seven years in Park City. These are the projects. Click any one to see the specs.</p>
+      <div class="port-grid">
+        <div class="port-card fu" onclick="openProject('hideout')" role="button" tabindex="0">
+          <div class="port-imgs">
+            <img src="images/img_09_hc1.jpg" alt="Hideout Canyon aerial" loading="lazy">
+            <img src="images/img_10_hc2.jpg" alt="Hideout Canyon home" loading="lazy">
+          </div>
+          <div class="port-info">
+            <div>
+              <div class="port-name">Hideout Canyon</div>
+              <div class="port-loc">Hideout, Utah</div>
+            </div>
+            <div class="port-arrow">&#8599;</div>
+          </div>
+        </div>
+        <div class="port-card fu d1" onclick="openProject('soaring')" role="button" tabindex="0">
+          <div class="port-imgs">
+            <img src="images/img_03.jpg" alt="Soaring Hawk exterior" loading="lazy">
+            <img src="images/img_12_sh3.jpg" alt="Soaring Hawk interior" loading="lazy">
+          </div>
+          <div class="port-info">
+            <div>
+              <div class="port-name">Soaring Hawk</div>
+              <div class="port-loc">Park City Area, Utah</div>
+            </div>
+            <div class="port-arrow">&#8599;</div>
+          </div>
+        </div>
+        <div class="port-card fu d2" onclick="openProject('golden')" role="button" tabindex="0">
+          <div class="port-imgs">
+            <img src="images/img_14_ge1.jpg" alt="Golden Eagle view" loading="lazy">
+            <img src="images/img_15_ge2.jpg" alt="Golden Eagle aerial" loading="lazy">
+          </div>
+          <div class="port-info">
+            <div>
+              <div class="port-name">Golden Eagle</div>
+              <div class="port-loc">Park City Area, Utah</div>
+            </div>
+            <div class="port-arrow">&#8599;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cta-bridge">
+    <div class="cta-logo" role="img" aria-label="Woodworth"></div>
+    <h2>Let's build your next investment.</h2>
+    <p>Park City luxury homes. Clear terms. A team that delivers.</p>
+    <a href="#contact" class="btn-primary" style="position:relative;z-index:1;">Start Investing</a>
+  </div>
+
+  <div id="contact">
+    <div class="section">
+      <span class="eyebrow fu">Get in Touch</span>
+      <h2 class="fu">Let's talk numbers.</h2>
+      <div class="contact-wrap">
+        <div class="fu">
+          <div class="c-line">
+            <div class="c-icon">&#128205;</div><span class="c-txt">Park City, Utah and surrounding communities</span>
+          </div>
+          <div class="c-line">
+            <div class="c-icon">&#9993;&#65039;</div><span class="c-txt">sebastiansanchwb@gmail.com</span>
+          </div>
+          <div class="c-note">We work with accredited investors only. Want to see the PPM or the full legal structure
+            first? We'll send everything over. No commitment required.</div>
+        </div>
+        <div class="fu d1">
+          <form class="c-form" id="cForm">
+            <div class="row2">
+              <div class="fg"><label>First Name</label><input type="text" name="fname" placeholder="John" required>
+              </div>
+              <div class="fg"><label>Last Name</label><input type="text" name="lname" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@example.com"
+                required></div>
+            <div class="fg"><label>Phone (Optional)</label><input type="tel" name="phone"
+                placeholder="+1 (801) 000-0000"></div>
+            <div class="fg"><label>Investment Range</label>
+              <select name="range" required>
+                <option value="" disabled selected>Select a range</option>
+                <option>$100,000 to $200,000</option>
+                <option>$200,000 to $350,000</option>
+                <option>$350,000 to $500,000</option>
+                <option>$500,000 and above</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message (Optional)</label><textarea name="msg"
+                placeholder="Questions, timeline, or anything else..."></textarea></div>
+            <button type="submit" class="btn-send">Send Message</button>
+            <div class="form-ok" id="formOk">Got it. We'll be in touch within 24 hours.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-brand">
+      <div class="f-logo" role="img" aria-label="Woodworth Developments"></div>
+    </div>
+    <div class="f-disc">Not an offer to sell securities. Open to accredited investors only under SEC Regulation D.
+      Returns are projections, not guarantees. Past performance doesn't predict future results.</div>
+    <div class="f-copy">Park City, Utah &#183; 2025</div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal-overlay" role="dialog" aria-modal="true">
+    <div id="modal-box">
+      <button id="modal-close" aria-label="Close">&times;</button>
+      <div class="car-wrap" id="carWrap">
+        <img id="modal-img" src="" alt="Project photo">
+        <button class="car-btn" id="carPrev">&#8249;</button>
+        <button class="car-btn" id="carNext">&#8250;</button>
+        <div class="car-counter"><span id="carIdx">1</span>&nbsp;/&nbsp;<span id="carTotal">1</span></div>
+        <div class="car-dots" id="carDots"></div>
+      </div>
+      <div class="modal-info">
+        <div id="modal-badge" class="modal-badge badge-done">Completed</div>
+        <h2 id="modal-title" style="font-size:clamp(1.5rem,3vw,2rem);margin-bottom:4px"></h2>
+        <div id="modal-loc"></div>
+        <div class="modal-specs" id="modal-specs"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="partner-overlay">
+    <div id="partner-box">
+      <h3>Get Started</h3>
+      <form id="partnerForm">
+        <div class="p-fg"><input type="text" name="pname" placeholder="Name" required></div>
+        <div class="p-fg"><input type="email" name="pemail" placeholder="Email" required></div>
+        <div class="p-fg"><input type="text" name="pcountry" placeholder="Country" required></div>
+        <div class="p-fg">
+          <select name="ptype" required>
+            <option value="" disabled selected>I'm an...</option>
+            <option value="Accredited Investor">Accredited Investor</option>
+            <option value="Potential Partner">Potential Partner</option>
+            <option value="Real Estate Professional">Real Estate Professional</option>
+            <option value="Other">Other</option>
           </select>
         </div>
-        <div class="fg"><label>Message (Optional)</label><textarea name="msg" placeholder="Questions, timeline, or anything else..."></textarea></div>
-        <button type="submit" class="btn-send">Send Message</button>
-        <div class="form-ok" id="formOk">Got it. We'll be in touch within 24 hours.</div>
+        <button type="submit" class="p-submit">Submit</button>
+        <div id="partnerOk">Got it. We'll be in touch within 24 hours.</div>
       </form>
+      <span class="p-close" onclick="closePartnerModal()">Close</span>
     </div>
   </div>
-</div></div>
 
-<footer>
-  <div class="f-brand"><div class="f-logo" role="img" aria-label="Woodworth Developments"></div></div>
-  <div class="f-disc">Not an offer to sell securities. Open to accredited investors only under SEC Regulation D. Returns are projections, not guarantees. Past performance doesn't predict future results.</div>
-  <div class="f-copy">Park City, Utah &#183; 2025</div>
-</footer>
-
-<!-- MODAL -->
-<div id="modal-overlay" role="dialog" aria-modal="true">
-  <div id="modal-box">
-    <button id="modal-close" aria-label="Close">&times;</button>
-    <div class="car-wrap" id="carWrap">
-      <img id="modal-img" src="" alt="Project photo">
-      <button class="car-btn" id="carPrev">&#8249;</button>
-      <button class="car-btn" id="carNext">&#8250;</button>
-      <div class="car-counter"><span id="carIdx">1</span>&nbsp;/&nbsp;<span id="carTotal">1</span></div>
-      <div class="car-dots" id="carDots"></div>
-    </div>
-    <div class="modal-info">
-      <div id="modal-badge" class="modal-badge badge-done">Completed</div>
-      <h2 id="modal-title" style="font-size:clamp(1.5rem,3vw,2rem);margin-bottom:4px"></h2>
-      <div id="modal-loc"></div>
-      <div class="modal-specs" id="modal-specs"></div>
-    </div>
-  </div>
-</div>
-
-<div id="partner-overlay">
-  <div id="partner-box">
-    <h3>Get Started</h3>
-    <form id="partnerForm">
-      <div class="p-fg"><input type="text" name="pname" placeholder="Name" required></div>
-      <div class="p-fg"><input type="email" name="pemail" placeholder="Email" required></div>
-      <div class="p-fg"><input type="text" name="pcountry" placeholder="Country" required></div>
-      <div class="p-fg">
-        <select name="ptype" required>
-          <option value="" disabled selected>I'm an...</option>
-          <option value="Accredited Investor">Accredited Investor</option>
-          <option value="Potential Partner">Potential Partner</option>
-          <option value="Real Estate Professional">Real Estate Professional</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <button type="submit" class="p-submit">Submit</button>
-      <div id="partnerOk">Got it. We'll be in touch within 24 hours.</div>
-    </form>
-    <span class="p-close" onclick="closePartnerModal()">Close</span>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
