@@ -224,14 +224,24 @@ header.scrolled .nav-hamburger span {
 }
 
 #hero h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.9rem, 3.8vw, 3.4rem);
-  line-height: 1.15;
-  letter-spacing: -.02em;
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: -.01em;
   color: #fff;
   margin-bottom: 20px;
+}
+
+.hero-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(.75rem, 1vw, .9rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 32px;
 }
 
 .hero-sub {
@@ -345,7 +355,7 @@ header.scrolled .nav-hamburger span {
 }
 
 h2 {
-  font-family: Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 400;
   font-size: clamp(2rem, 3.5vw, 3rem);
   letter-spacing: -.02em;
@@ -618,7 +628,7 @@ h2#deal {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  font-family: Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
@@ -854,7 +864,7 @@ h2#deal {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.05rem;
   color: var(--gold);
   font-style: italic;
@@ -880,7 +890,7 @@ h2#deal {
 }
 
 #portfolio-bg {
-  background: #150810;
+  background: #0E0D0A;
 }
 
 h2#portfolio {
@@ -972,7 +982,7 @@ h2#portfolio {
 }
 
 #cta-bridge {
-  background: #150810;
+  background: #0E0D0A;
   text-align: center;
   padding: 80px 64px;
   position: relative;
@@ -1113,7 +1123,7 @@ h2#portfolio {
 }
 
 .contact-left h3 {
-  font-family: Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 400;
   font-size: 1.5rem;
   margin-bottom: 14px;
@@ -1487,7 +1497,7 @@ footer {
 }
 
 #modal-title {
-  font-family: Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-weight: 900;
   font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--text);
@@ -1557,7 +1567,7 @@ footer {
 }
 
 #partner-box h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: #1A1916;
