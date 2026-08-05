@@ -1,7 +1,7 @@
 const _I = {
   hc1:"images/img_09_hc1.jpg", hc2:"images/img_10_hc2.jpg",
   sh1:"images/img_03.jpg",    sh2:"images/img_11_sh2.jpg", sh3:"images/img_12_sh3.jpg", sh4:"images/img_13_sh4.jpg",
-  ge1:"images/img_14_ge1.jpg",   ge2:"images/img_15_ge2.jpg", ge3:"images/img_16_ge3.jpg"
+  ge1:"images/ge1.jpg", ge2:"images/ge2.jpg", ge3:"images/ge3.jpg", ge4:"images/ge4.jpg", ge5:"images/ge5.jpg", ge6:"images/ge6.jpg", ge7:"images/ge7.jpg"
 };
 const P = {
   hideout:{name:"Hideout Canyon",location:"Hideout, Utah",status:"Completed",sc:"badge-done",
@@ -10,8 +10,8 @@ const P = {
   soaring:{name:"Soaring Hawk",location:"Park City Area, Utah",status:"Completed",sc:"badge-done",
     images:[_I.sh1,_I.sh2,_I.sh3,_I.sh4],
     specs:[{v:"12,197 sq ft",l:"Lot Area"},{v:"4,246 sq ft",l:"Home Size"},{v:"4 en-suite",l:"Bedrooms"},{v:"6",l:"Bathrooms"}]},
-  golden:{name:"Golden Eagle",location:"Park City Area, Utah",status:"In Development",sc:"badge-active",
-    images:[_I.ge1,_I.ge2,_I.ge3],
+  golden:{name:"Golden Eagle",location:"Park City Area, Utah",status:"Completed",sc:"badge-done",
+    images:[_I.ge1,_I.ge2,_I.ge3,_I.ge4,_I.ge5,_I.ge6,_I.ge7],
     specs:[{v:"24,394 sq ft",l:"Lot Area"},{v:"4,743 sq ft",l:"Home Size"},{v:"5 en-suite",l:"Bedrooms"},{v:"7",l:"Bathrooms"}]}
 };
 let cur=[],idx=0,tx=0;
