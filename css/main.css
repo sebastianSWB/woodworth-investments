@@ -1281,8 +1281,8 @@ footer {
   height: 147px;
   opacity: .55;
   background: #fff;
-  -webkit-mask: url('../logo-full.png') center/contain no-repeat, linear-gradient(#fff, #fff);
-  mask: url('../logo-full.png') center/contain no-repeat, linear-gradient(#fff, #fff);
+  -webkit-mask: url('../logo-icon.png') center/contain no-repeat, linear-gradient(#fff, #fff);
+  mask: url('../logo-icon.png') center/contain no-repeat, linear-gradient(#fff, #fff);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   -webkit-mask-mode: luminance;
