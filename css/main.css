@@ -497,16 +497,17 @@ h2 {
 
 .stat-strip {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+  flex-wrap: nowrap;
+  gap: 24px;
   margin-top: 72px;
   padding-top: 48px;
   border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
 .stat-box {
-  padding: 0 52px 40px 0;
-  flex-shrink: 0;
+  padding: 0 0 40px 0;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .stat-box-num {
@@ -598,11 +599,12 @@ h2#deal {
 
 .d-val {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
   color: var(--gold2);
   line-height: 1;
   margin-bottom: 14px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .d-note {

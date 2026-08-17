@@ -157,7 +157,7 @@ document.getElementById('partnerForm').addEventListener('submit',function(e){
       document.getElementById('partnerForm').reset();
       btn.textContent='Submit'; btn.disabled=false;
     },function(err){
-      alert('Something went wrong. Please email us at sebastiansanchwb@gmail.com');
+      alert('Something went wrong. Please email us at contact@woodworthquinn.com');
       btn.textContent='Submit'; btn.disabled=false;
     }).catch(function(err){
       alert('Error: '+JSON.stringify(err));
