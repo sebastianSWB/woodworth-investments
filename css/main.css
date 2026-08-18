@@ -1679,9 +1679,13 @@ footer {
     display: none;
   }
 
+  header {
+    z-index: 250;
+  }
+
   .nav-hamburger {
     display: flex;
-    z-index: 101;
+    z-index: 251;
     position: relative;
   }
 
